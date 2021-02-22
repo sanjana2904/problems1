@@ -31,20 +31,35 @@ array[$index]=${dict[$index]}
 
 echo "array values : " ${array[@]}
 
+
+
+for(( i=1;i<=4;i++ ))
+do
+   for(( j=$((i+1)); j<=4; j++ ))
+done
+done
+
+
+echo "array in descending order : " ${array[@]}
+
+
+
+
+
 for ((i=1; i<=4; i++ ))
 do
 	for (( j=$((i+1)); j<=4; j++ ))
 	do
-	  if [ $((array[$i])) -lt $((array[$j])) ]
+	  if [ $((array[$i])) -gt $((array[$j])) ]
 	   then
-		max=$((array[$i]))
+		min=$((array[$i]))
 		array[$i]=$((array[$j]))
 		array[$j]=$max
 	    fi
 	done
 done
 
-echo "array in descending order: " ${array[@]}
+echo "array in ascending order: " ${array[@]}
 
 
 
