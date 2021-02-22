@@ -20,3 +20,4 @@ echo $sum2
 
 echo $sum3
 
+echo ${dict[@]}
