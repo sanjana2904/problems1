@@ -1,5 +1,9 @@
 #! /bin/bash
 
+declare -A dict
+
+#declare -a array
+
 read -p "enter the values of :" a b c sum
 
 sum=$(( $a+$b*$c ))
@@ -20,4 +24,13 @@ echo $sum2
 
 echo $sum3
 
-echo ${dict[@]}
+dict=([1]=$sum [2]=$sum1 [3]=$sum2 [4]=$sum3)
+
+echo "dictionary value:" ${dict[@]}
+
+#for (( index=1; index<=4; index++ ))
+#do
+	array[$index]=${dict[$index]}
+#done
+#echo "array values: " ${array[@]}
+
